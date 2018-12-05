@@ -10,7 +10,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 
 ###############################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   RUN this program, then READ its code.
 #     Then answer the following, GETTING HELP AS NEED!  (Ask questions!!!)
 #     Write your answers in any reasonable way (your choice).
@@ -33,18 +33,18 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #     b. If you want a loop that runs from 0 to s, inclusive,
 #          what expression would you use in the _____ below?
 #
-#            for k in range(_____):
+#            for k in range(s + 1):
 #
 #     c. If you want a loop that runs from r to s, inclusive, assuming s >= r,
 #          what expression would you use in the _____ below?
 #
-#            for k in range(_____):
+#            for k in range(s + 1 - r):
 #
 #     d. If you want a loop that runs from (r + 4) to (s - 10),
 #          including the (r + 4) but not including the (s - 10),
 #          what expression would you use in the _____ below?
 #
-#            for k in range(_____):
+#            for k in range((s - 10)-(r + 4)):
 #
 #     e. The following code snippet attempts to return the number
 #          of integers from r to s, inclusive, whose cosines are positive.
@@ -56,9 +56,16 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #                      count = 1
 #                  return count
 #
+#             count = 0
+#               for k in range((s + 1) - r):
+#                   if math.cos(k + r) > 0:
+#                       count = count + 1
+#               return count
+#
 #     f. The code in the "graphics accumulation" example below includes:
 #            for _ in range(n):
 #        What does the   _   (underscore) mean?
+#               you can ignore this variable like k
 #
 #     g. The code in the "graphics accumulation" example below includes:
 #
@@ -73,6 +80,8 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #        one of the following two attempts is a CORRECT attempt
 #        (i.e., is equivalent in its functionality to the above)
 #        and one is WRONG.  Which is the WRONG one?
+#
+#               first is correct, second is incorect
 #
 #              x = starting_point.x
 #              for k in range(n):

@@ -9,8 +9,8 @@ Additionally, it emphasizes that you must
 before you can implement a solution to the problem in Python.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Alyssa Taylor.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -110,6 +110,14 @@ def draw_parallel_lines(n, point, length, window):
     ###########################################################################
     # -------------------------------------------------------------------------
 
+    x = point.x
+    y = point.y
+
+    for _ in range(n):
+        left_most_point = rg.Point(x, y)
+        line = rg.Line(left_most_point, x + length)
+        line.attach_to(window)
+    window.render()
 
 def run_test_draw_lines():
     """ Tests the   draw_lines  function. """
@@ -175,6 +183,15 @@ def draw_lines(n, point, window):
     ###########################################################################
     # -------------------------------------------------------------------------
 
+    pX = point.x
+    pY = point.y
+
+    for _ in range(n):
+        left_most_point = rg.Point(pX, pY)
+        right_most_point = rg.Point((pX + 100), (pY +- 100))
+        line = rg.Line(left_most_point, right_most_point)
+        line.attach_to(window)
+    window.render()
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.

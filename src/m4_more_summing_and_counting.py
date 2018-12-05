@@ -12,8 +12,8 @@ in its "in graphics" form:
    IN GRAPHICS:   x = x + pixels
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Alyssa Taylor.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import math
 import builtins  # Never necessary, but here for pedagogical reasons
@@ -90,7 +90,7 @@ def run_test_sum_from():
     print('       actual (from my code):  ', answer_from_my_code)
 
 # -----------------------------------------------------------------------------
-# TODO: 2.
+# DONE: 2.
 #   When you have READ the above  run_test_sum_from  function,
 #   asking questions as needed, and you feel that you (mostly, at least)
 #   understand it, and you feel that you understand from the example:
@@ -125,6 +125,11 @@ def sum_from(m, n):
     #   of the RANGE expression, if you happen to know them.
     # -------------------------------------------------------------------------
 
+    total = 0  # Initialize to 0 BEFORE the loop
+    for k in range(m - 1, n + 1):  # Loop
+        total = total + k  # Accumulate INSIDE the loop.
+
+    return total  # Return the result AFTER the loop
 
 def run_test_factorial():
     """ Tests the   factorial   function. """
@@ -180,6 +185,11 @@ def factorial(n):
     #   use an explicit    for ... in range(...):     statement.
     # -------------------------------------------------------------------------
 
+    total = 0  # Initialize to 0 BEFORE the loop
+    for k in range(n):  # Loop
+        total = total + math.factorial(k)  # Accumulate INSIDE the loop.
+
+    return total  # Return the result AFTER the loop
 
 def run_test_count_cosines_from():
     """ Tests the   count_cosines_from   function. """
@@ -223,6 +233,35 @@ def run_test_count_cosines_from():
     # Below this comment, add 5 more test cases of your own choosing.
     # -------------------------------------------------------------------------
 
+    # Test 2:
+    expected = 2
+    answer = count_cosines_from(3, 9, 0.29)
+    print('Test 2 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 3:
+    expected = 2
+    answer = count_cosines_from(3, 9, 0.29)
+    print('Test 3 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 4:
+    expected = 2
+    answer = count_cosines_from(3, 9, 0.29)
+    print('Test 4 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 5:
+    expected = 2
+    answer = count_cosines_from(3, 9, 0.29)
+    print('Test 5 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 6:
+    expected = 2
+    answer = count_cosines_from(3, 9, 0.29)
+    print('Test 6 expected:', expected)
+    print('       actual:  ', answer)
 
 def count_cosines_from(m, n, x):
     """
@@ -244,7 +283,7 @@ def count_cosines_from(m, n, x):
       -- count_cosines_from(4, 8, -0.5)  returns  4
     """
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # IMPORTANT: As in previous problems in this session,
@@ -252,6 +291,13 @@ def count_cosines_from(m, n, x):
     #   of the RANGE expression, if you happen to know them.
     # -------------------------------------------------------------------------
 
+    import math
+    count = 0  # Initialize to 0 BEFORE the loop
+    for k in range(n + 1 - m):  # Loop
+        if math.cos(k + m) > x:  # If the condition holds:
+            count = count + 1  # Increment INSIDE the loop.
+
+    return count  # Return the result AFTER the loop
 
 def run_test_sum_unit_fractions_from():
     """ Tests the   sum_unit_fractions_from   function. """
