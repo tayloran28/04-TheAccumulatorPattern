@@ -262,7 +262,7 @@ def draw_lines_from_rectangles(rectangle1, rectangle2, n, window):
       Must  ** render **     but   ** NOT close **   the window.
 
     Type hints:
-      :type rectangle1: rg.Rectangle
+      :type rectangle1: rg.Rectangle 
       :type rectangle2: rg.Rectangle
       :type n: int
       :type window: rg.RoseWindow
